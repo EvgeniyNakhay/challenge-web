@@ -1,27 +1,11 @@
-.main{
-    min-height: 103vh;
-    padding: 5vh 15px;
-    background-attachment: fixed;
-    background-image: linear-gradient(to top left, #65f79f, #65d3f7);
-    overflow-x: hidden;
-    color: #7B7B9C;
-}
 
-.main::before{
-    content: '';
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: .15;
-    background-color: var(--color-green);
-}
 
 .main h1{
     font-weight: 600;
     color: #000000;
+    padding: 8px 78px 8px 24px;
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 8px;
 }
 
 .main nav ul{
@@ -29,5 +13,39 @@
 }
 
 .main li{
-    margin: 0 15px 0 15px;
+    margin: 0 20px 0 20px;
+}
+.main li:last-child{
+    margin-right: 0;
+    font-weight: 500;
+    color: #ffffff;
+}
+.main li:last-child a{
+    padding: 8px 16px;
+    background-color: #7a82f8aa;
+    border-radius: 8px;
+}
+.main li:first-child::after{
+    content: url("/icons/open.svg");
+    width: 12px;
+    height: 6px;
+    padding-left: 14px;
+    cursor: pointer;
+}
+.main li:last-child a::before{
+    content: url("/icons/add.svg");
+    padding-right: 14px;
+    position: relative;
+    top: 3px;
+}
+
+.main .header_avatar{
+    display: flex;
+}
+.main .header_avatar::after{
+    content: url("/icons/open.svg");
+    width: 12px;
+    height: 6px;
+    padding-left: 14px;
+    margin-top: 10%;
 }

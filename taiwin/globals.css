@@ -581,6 +581,20 @@ video {
   }
 }
 
+:root{
+  --color-primary: #7B7B9C;
+  --color-black: #000000;
+  --color-blue-I: #7A82F8;
+  --color-blue-II: #565EDB;
+  --color-blue-III: #242752;
+  --color-blue-IV: #65d3f7; 
+  --color-red: #CD2626;
+  --color-orange: #FCAF1A;
+  --color-green-I: #26CD40;
+  --color-green-II: #65f79f;
+
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -593,7 +607,32 @@ body {
   overflow-x: hidden;
 }
 
-body {
+body{
+  user-select: none;
+  min-height: 100vh;
+  padding: 5vh 15px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-attachment: fixed;
+  overflow: hidden;
+  background-image: linear-gradient(to top left, var(--color-green-II), var(--color-blue-IV));
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .15;
+  background-color: var(--color-orange);
+}
+
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -612,4 +651,5 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
+

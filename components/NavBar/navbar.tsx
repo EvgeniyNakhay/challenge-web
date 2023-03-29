@@ -1,43 +1,47 @@
 import {Box, Container, Grid, TextField} from "@mui/material";
 import styles from "./styles/NavBar.module.css";
 import { styled, alpha } from '@mui/material/styles';
+import Image from "next/image";
 
 export default function Navbar({children}){
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
-        borderRadius: theme.shape.borderRadius,
         padding: '5px 30px',
+        borderRadius: '8px',
         backgroundColor: alpha(theme.palette.common.white, 0.15),
         '&:hover': {
           backgroundColor: alpha(theme.palette.common.white, 0.25),
         },
+        '&:active': {
+            backgroundColor: alpha(theme.palette.common.white, 0.25),
+            cursor: 'text',
+          },
         marginRight: theme.spacing(2),
         marginLeft: 0,
-        width: '100%',
+        width: '258px',
         [theme.breakpoints.up('sm')]: {
           marginLeft: theme.spacing(3),
-          width: 'auto',
+          width: '258px',
         },
       }));
 
     return (
         <div className={styles.main}>
-            <Container sx={{ 
-                height: '90vh',
-                bgcolor: 'rgba(255, 255, 255, .25)', 
-                borderRadius: '20px',
-                border: '1px solid rgba(255, 255, 255, .4)',
-                }}>
+            <Container>
                 <Grid container spacing={2} sx={{
                     height: 84,
                     paddingTop: '20px',
                     paddingBottom: '20px',
+                    alignItems: 'center',
                 }}>
                     <Grid item xs={1}>
                         <h1>Logo</h1>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={6} sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                    }}>
                         <Box>
                             <nav>
                                 <ul>
@@ -49,41 +53,24 @@ export default function Navbar({children}){
                             </nav>
                         </Box>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={4} sx={{
+                        display: 'grid',
+                        justifyContent: 'flex-end',
+                    }}>
                         <Search>Поиск</Search>
                     </Grid>
                     <Grid item xs={1}>
-                        Аватар
+                        <div className={styles.header_avatar}>
+                            <Image 
+                                src="/../public/avatar/Avatar.png"
+                                width={44}
+                                height={44}
+                                alt="avatar"
+                            />
+                        </div>
                     </Grid>
                 </Grid>
             </Container>
-            {/* <nav className={'container mx-auto border-solid-white'}>
-                <Grid container>
-                    <Grid xs={2} ml={10}>
-                        <h1>Logo</h1>
-                    </Grid>
-                    <Grid xs={7}>
-                        <div className={"flex-1"}>
-                            <span>
-                                Челленджи
-                            </span>
-                            <span>
-                                Мир
-                            </span>
-                            <span>
-                                Сообщества
-                            </span>
-                            <span>
-                                Создать
-                            </span>
-                        </div>
-                    </Grid>
-                    <Grid xs={2}>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                        <span>Avatar</span>
-                    </Grid>
-                </Grid>
-            </nav> */}
             {children}
         </div>
     )
