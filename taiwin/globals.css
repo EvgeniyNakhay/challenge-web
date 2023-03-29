@@ -7,6 +7,8 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
 *,
 ::before,
 ::after {
@@ -608,6 +610,7 @@ body {
 }
 
 body{
+  font-family: 'Inter', sans-serif;
   user-select: none;
   min-height: 100vh;
   padding: 5vh 15px;

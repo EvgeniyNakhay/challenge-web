@@ -2,6 +2,7 @@ import '@/taiwin/globals.css'
 import type { AppProps } from 'next/app';
 import {Container} from "@mui/material";
 import Navbar from "@/components/NavBar/navbar";
+import Main from '@/components/MainPage/mainPage';
 import '../styles/globals.css';
 
 // Команда для сборки стелей тайвин
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}>
       <Navbar>
         <Component {...pageProps} />
-        <div>main</div>
+        <Main />
       </Navbar>
     </Container>
   )

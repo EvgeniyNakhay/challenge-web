@@ -43,12 +43,12 @@ export default function Navbar({children}){
                         justifyContent: 'flex-end',
                     }}>
                         <Box>
-                            <nav>
+                            <nav className={styles.menu_header}>
                                 <ul>
-                                    <li><a href="#">Челленджи</a></li>
-                                    <li><a href="#">Мир</a></li>
-                                    <li><a href="#">Сообщества</a></li>
-                                    <li><a href="#">Создать</a></li>
+                                    <li className={styles.item_header}><a href="#">Челленджи</a></li>
+                                    <li className={styles.item_header}><a href="#">Мир</a></li>
+                                    <li className={styles.item_header}><a href="#">Сообщества</a></li>
+                                    <li className={styles.item_header}><a href="#">Создать</a></li>
                                 </ul>
                             </nav>
                         </Box>
