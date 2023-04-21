@@ -2,6 +2,7 @@ import { Container, Box } from '@mui/material';
 import TitlePage from "./titlePage";
 import Aside from './aside';
 import TaskDay from './taskDay';
+import Statistics from './statistic';
 
 export default function Main(){
 
@@ -20,7 +21,7 @@ export default function Main(){
           <TaskDay />        
         </Box>
         <Box gridColumn="span 1">
-          <div>Календарь</div>
+          <Statistics />
         </Box>
       </Box>
     </Container>

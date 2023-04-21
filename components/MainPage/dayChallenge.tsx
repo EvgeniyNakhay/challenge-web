@@ -25,7 +25,7 @@ export default function DayChallenge() {
       el === new Date().getDate() ? (el = 'СЕГОДНЯ', newArray.push(el)) :
       el === new Date().getDate()-1 ? (el = 'BЧЕРА', newArray.push(el)) : newArray.push(el);
     })
-    // console.log(newArray);
+    console.log(newArray);
     // console.log(arr)
     return newArray;
   }
@@ -35,16 +35,18 @@ export default function DayChallenge() {
   return(
     <Box sx={{
       p: '24px 16px',
-      backgroundColor: 'pink',
+      // backgroundColor: 'pink',
     }}>
-      {listDay.map((day) => {
+      {listDay.map((day) => (
         <Box key={day} sx={{
           p: '10px 0',
-          backgroundColor: 'red',
         }}>
-          {day}
+          <Typography sx={{
+            fontSize: "10px",
+          }}>{day}</Typography>
+          
         </Box>
-      })}
+      ))}
     </Box>
   );
 }
