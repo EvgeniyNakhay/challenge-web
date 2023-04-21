@@ -25,39 +25,26 @@ export default function DayChallenge() {
       el === new Date().getDate() ? (el = 'СЕГОДНЯ', newArray.push(el)) :
       el === new Date().getDate()-1 ? (el = 'BЧЕРА', newArray.push(el)) : newArray.push(el);
     })
-    console.log(newArray);
+    // console.log(newArray);
     // console.log(arr)
     return newArray;
   }
+
+  const listDay = itemDay(createContentDayChallnge);
   
   return(
-    // <>{itemDay(createContentDayChallnge)}</>
-
     <Box sx={{
       p: '24px 16px',
       backgroundColor: 'pink',
     }}>
-      {itemDay(createContentDayChallnge).map((el) => {
-        <Box sx={{
+      {listDay.map((day) => {
+        <Box key={day} sx={{
           p: '10px 0',
           backgroundColor: 'red',
         }}>
-          {el}
+          {day}
         </Box>
       })}
     </Box>
-
-
-    // <Box sx={{
-
-    // }}>
-    //   {itemDay(createContentDayChallnge).forEach((day) => {
-    //     <Box key={day} sx={{
-
-    //     }}>
-    //       {day}
-    //     </Box>
-    //   })}
-    // </Box>
   );
 }
