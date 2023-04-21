@@ -67,6 +67,13 @@
     color: #242752;
 }
 
+.title__page::before{
+    content: url('./../../../public/icons/ellipse.svg');
+    margin-right: 12px;
+    position: relative;
+    top: 5px;
+}
+
 
 /*---------------------
 стили для меню (левая часть)
@@ -79,14 +86,43 @@
 
 .aside_wrapper .item_aside{
     margin: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
-.aside_wrapper .item_aside.active{
+.aside_wrapper .chats .item_aside:last-child{
+    margin-left: 5px;
+    column-gap: 13px;
+}
+
+.aside_wrapper .item_aside.active{ 
     color: #7a82f8aa;
 }
 
 .aside_wrapper .item_aside:hover{
     transition: all .3s ease;
     color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+
+/*---------------------
+стили списка задач (центральная часть)
+------------------------*/
+.task_week::before{
+    content: url("./../../../public/icons/icon-calendar.svg");
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+}
+
+.task_week::after{
+    content: url("./../../../public/icons/open.svg");
+    margin-right: 10px;
+    width: 15px;
+    margin-left: 14px;
     cursor: pointer;
 }
