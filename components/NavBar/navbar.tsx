@@ -48,7 +48,7 @@ export default function Navbar({children}){
                                     <li className={styles.item_header}><a href="#">Челленджи</a></li>
                                     <li className={styles.item_header}><a href="#">Мир</a></li>
                                     <li className={styles.item_header}><a href="#">Сообщества</a></li>
-                                    <li className={styles.item_header}><a href="#">Создать</a></li>
+                                    <li className={styles.item_header}><a href="/create">Создать</a></li>
                                 </ul>
                             </nav>
                         </Box>

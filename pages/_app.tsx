@@ -2,7 +2,6 @@ import '@/taiwin/globals.css'
 import type { AppProps } from 'next/app';
 import {Container} from "@mui/material";
 import Navbar from "@/components/NavBar/navbar";
-import Main from '@/components/MainPage/mainPage';
 import '../styles/globals.css';
 
 // Команда для сборки стелей тайвин
@@ -11,7 +10,7 @@ import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Container sx={{ 
+    <Container sx={{
         height: '90vh',
         bgcolor: 'rgba(255, 255, 255, .25)', 
         borderRadius: '20px',
@@ -19,7 +18,6 @@ export default function App({ Component, pageProps }: AppProps) {
         }}>
       <Navbar>
         <Component {...pageProps} />
-        <Main />
       </Navbar>
     </Container>
   )
