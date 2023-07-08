@@ -1,7 +1,9 @@
 import styles from "./../NavBar/styles/NavBar.module.css";
+import {TitilePage} from "@/types/TitlePage";
+import React from "react";
 
-export default function TitlePage(props){
+export const TitlePage: React.FC<TitilePage> = ({title}) => {
   return (
-    <h2 className={styles.title__page}>{props.title}</h2>
+    <h2 className={styles.title__page}>{title}</h2>
   )
 }
