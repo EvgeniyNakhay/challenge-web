@@ -2,8 +2,10 @@ import {Box, Container, Grid, TextField} from "@mui/material";
 import styles from "./styles/NavBar.module.css";
 import { styled, alpha } from '@mui/material/styles';
 import Image from "next/image";
+import {NavBarTypes} from "@/types/NavBarTypes";
+import React from "react";
 
-export default function Navbar({children}){
+export const Navbar: React.FC<NavBarTypes> = ({children}) => {
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
