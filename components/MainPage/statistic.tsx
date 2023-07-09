@@ -1,26 +1,49 @@
-import {Box, Grid, Typography} from "@mui/material"
+import {Grid, Typography} from "@mui/material"
 import styles from "./../NavBar/styles/NavBar.module.css";
-import Calendar from "./calendar";
+import {Calendar} from "./calendar";
+import {SelectPeriod} from "@/components/Global/SelectPeriod";
 
-export default function Statistics() {
-  return (
-    <Grid className={styles.statistic_wrapper} container sx={{
-        backgroundColor: "red"
-    }}>
-        <Grid xs={10}>
-            <Typography>
-                Статистика
-            </Typography>
-            {/* вынести период в отдельный компонент */}
-            <select className={styles.statistic_week}>Неделя</select>
-        </Grid>
+import {useState} from "react";
 
-        <Box sx={{
-            backgroundColor: "rgba(255, 255, 255, .15)",
-            borderRadius: "0 0 16px 16px",
+const status = {
+    ok: 1,
+    filed: 2,
+    processe: 3,
+    none: undefined,
+}
+
+const Statistics = () => {
+
+    const [day, setDay] = useState([
+        {id: 1, day: 7, status: status.ok},
+        {id: 2, day: 8, status: status.filed},
+        {id: 3, day: 9, status: status.processe},
+        {id: 4, day: 10, status: status.none},
+        {id: 5, day: 10, status: status.none},
+        {id: 6, day: 10, status: status.none},
+        {id: 7, day: 10, status: status.none},
+    ])
+
+    return (
+        <Grid className={styles.statistic_wrapper} container sx={{
+            backgroundColor: "red"
         }}>
-            <Calendar/>
-        </Box>
-    </Grid>
-  );
-}  
+            <Grid xs={12}>
+                <Grid xs={1}>
+                    <Typography>
+                        Статистика
+                    </Typography>
+                </Grid>
+                {/* вынести период в отдельный компонент */}
+                <Grid xs={5} >
+                    <SelectPeriod/>
+                </Grid>
+            </Grid>
+            <Grid>
+                <Calendar data={day}/>
+            </Grid>
+        </Grid>
+    );
+}
+
+export default Statistics

@@ -1,6 +1,6 @@
 import React from "react";
 
 
-export interface NavBar {
+export interface NavBarTypes {
     children: React.ReactElement
 }

@@ -1,17 +1,24 @@
-import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent} from "@mui/material";
+import {useState} from "react";
 
 
-const SelectPeriod = () => {
+export const SelectPeriod = () => {
+    const [period, setPeriod] = useState("Неделя");
+
+    const setPeriodSelect = (e: SelectChangeEvent) => {
+        setPeriod(e.target.value)
+    }
+
     return (
         <>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">{period}</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
+                    value={period}
+                    label={period}
+                    onChange={setPeriodSelect}
                 >
                     <MenuItem value={10}>Ten</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
@@ -21,3 +28,4 @@ const SelectPeriod = () => {
         </>
     )
 }
+

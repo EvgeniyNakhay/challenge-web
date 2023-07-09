@@ -1,5 +1,5 @@
 import styles from "./../NavBar/styles/NavBar.module.css";
-import {TitilePage} from "@/types/TitlePage";
+import {TitilePage} from "@/types/TitlePageTypes";
 import React from "react";
 
 export const TitlePage: React.FC<TitilePage> = ({title}) => {
