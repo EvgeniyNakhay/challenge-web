@@ -15,15 +15,10 @@ import Statistics from "@/components/MainPage/statistic";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Container sx={{
-        height: '90vh',
-        bgcolor: 'rgba(255, 255, 255, .25)', 
-        borderRadius: '20px',
-        border: '1px solid rgba(255, 255, 255, .4)',
-        }}>
+    <>
         <Navbar>
             <Grid container>
-                <Grid mt={5} xs={2}>
+                <Grid mt={3} xs={2}>
                     <Grid>
                         <TitlePage title={"Пить воду"}/>
                     </Grid>
@@ -31,11 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
                         <Aside/>
                     </Grid>
                 </Grid>
-                <Grid xs={10}>
+                <Grid xs={10} mt={2}>
                     <Component {...pageProps} />
                 </Grid>
             </Grid>
         </Navbar>
-    </Container>
+    </>
   )
 }
