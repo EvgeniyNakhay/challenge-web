@@ -1,8 +1,8 @@
-import {Box, Container, Grid, List, ListItem, ListItemText, TextField} from "@mui/material";
+import {Grid, List, ListItemText} from "@mui/material";
 import Image from "next/image";
-import {NavBarTypes} from "@/types/NavBarTypes";
 import React from "react";
 import Link from "next/link";
+import {NavBarTypes} from "@/types/Layouts";
 
 const list = [
     {id: 1, text: 'Челленджи', url: '#'},

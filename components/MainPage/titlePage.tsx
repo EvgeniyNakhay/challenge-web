@@ -1,6 +1,6 @@
 import styles from "./../NavBar/styles/NavBar.module.css";
-import {TitilePage} from "@/types/TitlePageTypes";
 import React from "react";
+import {TitilePage} from "@/types/Layouts";
 
 export const TitlePage: React.FC<TitilePage> = ({title}) => {
   return (

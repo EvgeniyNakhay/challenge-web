@@ -1,6 +1,6 @@
 import React from "react";
-import {CalendarTypes} from "@/types/CalendarTypes";
-import {Grid, List, ListItem, ListItemText, Typography} from "@mui/material";
+import {Grid, List, ListItemText, Typography} from "@mui/material";
+import {CalendarTypes} from "@/types/Layouts";
 
 
 export const Calendar: React.FC<CalendarTypes> = ({data, flag}) => {

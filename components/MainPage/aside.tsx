@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Aside() {
   return (
-    <div className={styles.aside_wrapper}>
+    <div className="w-2/5">
       <Box sx={{
         marginBottom: "20px",
         borderBottom: "1px solid rgba(255, 255, 255, .25)"
