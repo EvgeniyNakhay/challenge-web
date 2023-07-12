@@ -4,13 +4,13 @@ import Statistics from "@/components/MainPage/statistic";
 
 export default function Home() {
     return (
-        <Grid container>
-            <Grid xs={8}>
+        <>
+            <div className="w-1/5">
                 <TaskDay/>
-            </Grid>
-            <Grid xs={3}>
+            </div>
+            <div className="w-1/2">
                 <Statistics/>
-            </Grid>
-        </Grid>
+            </div>
+        </>
     )
 }

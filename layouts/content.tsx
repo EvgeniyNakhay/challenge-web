@@ -1,12 +1,27 @@
-import {Container} from "@mui/material";
+import {Container, Grid} from "@mui/material";
+import React from "react";
+import {Layouts} from "@/types/Layouts";
+import {TitlePage} from "@/components/MainPage/titlePage";
+import Aside from "@/components/MainPage/aside";
+import {Navbar} from "@/components/NavBar/navbar";
 
 
-export default function Content({children}){
+const Content: React.FC<Layouts> = ({children}) => {
     return (
-        <Container sx={{
-            marginTop: '20px',
-        }}>
-            { children }
-        </Container>
+        <>
+            <Navbar>
+                <>
+                    <div className="w-1/6">
+                        <TitlePage title={"Пить воду"}/>
+                        {/*<Aside/>*/}
+                    </div>
+                    <div className="w-5/6">
+                        {children}
+                    </div>
+                </>
+            </Navbar>
+        </>
     )
 }
+
+export default Content;
