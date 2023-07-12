@@ -4,5 +4,6 @@ export interface CalendarTypes {
         id: number,
         day: number,
         status: number | undefined
-    }[]
+    }[],
+    flag: boolean
 }

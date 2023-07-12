@@ -1,78 +1,53 @@
-import {Box, Container, Grid, TextField} from "@mui/material";
-import styles from "./styles/NavBar.module.css";
-import { styled, alpha } from '@mui/material/styles';
+import {Box, Container, Grid, List, ListItem, ListItemText, TextField} from "@mui/material";
 import Image from "next/image";
 import {NavBarTypes} from "@/types/NavBarTypes";
 import React from "react";
+import Link from "next/link";
 
+const list = [
+    {id: 1, text: 'Челленджи', url: '#'},
+    {id: 2, text: 'Мир', url: '#'},
+    {id: 3, text: 'Сообщества', url: '#'},
+    {id: 4, text: 'Создать', url: '#'},
+]
 export const Navbar: React.FC<NavBarTypes> = ({children}) => {
 
-    const Search = styled('div')(({ theme }) => ({
-        position: 'relative',
-        padding: '5px 30px',
-        borderRadius: '8px',
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-          backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        '&:active': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-            cursor: 'text',
-          },
-        marginRight: theme.spacing(2),
-        marginLeft: 0,
-        width: '258px',
-        [theme.breakpoints.up('sm')]: {
-          marginLeft: theme.spacing(3),
-          width: '258px',
-        },
-      }));
-
     return (
-        <div className={styles.main}>
-            <Container>
-                <Grid container spacing={2} sx={{
-                    height: 84,
-                    paddingTop: '20px',
-                    paddingBottom: '20px',
-                    alignItems: 'center',
-                }}>
-                    <Grid item xs={1}>
-                        <h1>Logo</h1>
-                    </Grid>
-                    <Grid item xs={6} sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                    }}>
-                        <Box>
-                            <nav className={styles.menu_header}>
-                                <ul>
-                                    <li className={styles.item_header}><a href="#">Челленджи</a></li>
-                                    <li className={styles.item_header}><a href="#">Мир</a></li>
-                                    <li className={styles.item_header}><a href="#">Сообщества</a></li>
-                                    <li className={styles.item_header}><a href="/create">Создать</a></li>
-                                </ul>
-                            </nav>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={4} sx={{
-                        display: 'grid',
-                        justifyContent: 'flex-end',
-                    }}>
-                        <Search>Поиск</Search>
-                    </Grid>
-                    <Grid item xs={1}>
-                        <div className={styles.header_avatar}>
-                            <Image 
-                                src="/../public/avatar/Avatar.png"
-                                width={44}
-                                height={44}
-                                alt="avatar"
-                            />
-                        </div>
-                    </Grid>
+        <div>
+            <Grid container sx={{
+                paddingTop: '20px',
+                paddingBottom: '20px',
+                alignItems: 'center',
+            }}>
+                <Grid item xs={1}>
+                    <h1>Logo</h1>
                 </Grid>
-            </Container>
+                <Grid xs={6}>
+                    <List sx={{
+                        display: "inline-list-item"
+                    }}>
+                        {
+                            list.map((item) => (
+                                <>
+                                    <ListItemText>
+                                        <Link href={item.url}>{item.text}</Link>
+                                    </ListItemText>
+                                </>
+                            ))
+                        }
+                    </List>
+                </Grid>
+                <Grid xs={5}>
+                    <div>
+                        <Image
+                            src="/../public/avatar/Avatar.png"
+                            width={44}
+                            height={44}
+                            alt="avatar"
+                        />
+                    </div>
+                </Grid>
+            </Grid>
             {children}
         </div>
     )

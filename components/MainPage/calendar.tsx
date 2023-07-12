@@ -1,30 +1,41 @@
 import React from "react";
 import {CalendarTypes} from "@/types/CalendarTypes";
-import {Grid, List, ListItem, Typography} from "@mui/material";
+import {Grid, List, ListItem, ListItemText, Typography} from "@mui/material";
 
 
-export const Calendar: React.FC<CalendarTypes> = ({data}) => {
+export const Calendar: React.FC<CalendarTypes> = ({data, flag}) => {
   return(
          <List sx={{
-             width: "20%",
              display: "inline-list-item"
          }}>
              {
                  data.map((item) => (
                      <>
-                         <ListItem sx={{
-                             margin: "5%",
-                             padding: 0
-                         }}>
-                            <Grid>
-                                <Typography>
+                         <ListItemText>
+                            <Grid ml={1}>
+                                <Typography sx={{
+                                    textAlign: "center",
+                                    fontSize: "3vh",
+                                    fontWeight: "bold",
+                                    opacity: .7,
+                                    width: "1.5em",
+                                    height: "5vh",
+                                    paddingTop: "5%",
+                                    paddingLeft: .5,
+                                    paddingRight: .5,
+                                    background: "#EDEEFC",
+                                    borderRadius: "10%"
+                                }}>
                                     {item.day}
                                 </Typography>
-                                <Typography>
-                                    {item.status}
-                                </Typography>
+                                {
+                                    flag ?
+                                        <Typography>
+                                            {item.status}
+                                        </Typography> : null
+                                }
                             </Grid>
-                         </ListItem>
+                         </ListItemText>
                      </>
                  ))
              }

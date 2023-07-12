@@ -11,20 +11,9 @@ export const SelectPeriod = () => {
 
     return (
         <>
-            <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">{period}</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={period}
-                    label={period}
-                    onChange={setPeriodSelect}
-                >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
+           <select>
+               <option>{period}</option>
+           </select>
         </>
     )
 }

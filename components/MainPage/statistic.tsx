@@ -25,22 +25,22 @@ const Statistics = () => {
     ])
 
     return (
-        <Grid className={styles.statistic_wrapper} container sx={{
-            backgroundColor: "red"
-        }}>
+        <Grid className={styles.statistic_wrapper} container mt={2} sx={{
+            background: "#ffffff"
+        }} >
             <Grid xs={12}>
-                <Grid xs={1}>
-                    <Typography>
+                    <Typography ml={1.5} sx={{
+                        fontSize: "1.1em",
+                        fontWeight: "bold"
+                    }}>
                         Статистика
                     </Typography>
-                </Grid>
                 {/* вынести период в отдельный компонент */}
-                <Grid xs={5} >
-                    <SelectPeriod/>
-                </Grid>
             </Grid>
             <Grid>
-                <Calendar data={day}/>
+                <div>
+                    <Calendar data={day} flag={false}/>
+                </div>
             </Grid>
         </Grid>
     );
