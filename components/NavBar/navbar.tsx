@@ -2,7 +2,6 @@ import {Grid, List, ListItemText, Typography} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import {NavBarTypes} from "@/types/Layouts";
 import Button from "@mui/material/Button";
 
 const list = [
@@ -16,18 +15,21 @@ const list = [
             "&:hover": {fontsize: 17, background: "#6B73EF", opacity: 0.8}}
     },
 ]
-export const Navbar: React.FC<NavBarTypes> = ({children}) => {
+export const Navbar: React.FC = () => {
 
     return (
         <>
             <Grid container sx={{
-                paddingTop: '2vh',
-                paddingBottom: '2vh',
+                background: "#F7F8FC",
+                paddingLeft: '20vh',
+                paddingTop: '1.5vh',
+                marginBottom: '5vh',
+                boxShadow: "0px 5px 10px -1px rgba(100, 106, 111, 0.20)"
             }}>
-                <Grid xs={3}>
+                <Grid xs={2}>
                     <h1>Logo</h1>
                 </Grid>
-                <Grid xs={7}>
+                <Grid xs={8}>
                     <List sx={{
                         display: "inline-list-item"
                     }}>
@@ -51,9 +53,7 @@ export const Navbar: React.FC<NavBarTypes> = ({children}) => {
                         }
                     </List>
                 </Grid>
-                <Grid xs={1} sx={{
-                    border: '1px solid'
-                }}>
+                <Grid xs={1}>
                     <div>
                         <Image
                             src="/../public/avatar/Avatar.png"
@@ -64,7 +64,6 @@ export const Navbar: React.FC<NavBarTypes> = ({children}) => {
                     </div>
                 </Grid>
             </Grid>
-            {children}
         </>
     )
 }

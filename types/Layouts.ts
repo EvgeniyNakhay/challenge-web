@@ -9,7 +9,8 @@ export interface NavBarTypes {
 }
 
 export interface TitilePage{
-    title: string
+    title: string,
+    flag: boolean
 }
 
 export interface CalendarTypes {
