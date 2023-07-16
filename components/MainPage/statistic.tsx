@@ -25,18 +25,22 @@ const Statistics = () => {
     ])
 
     return (
-        <div className="w-1/12">
-            <Typography ml={1.5} sx={{
-                fontSize: "1.1em",
-                fontWeight: "bold"
-            }}>
-                Статистика
-            </Typography>
-            {/* вынести период в отдельный компонент */}
-            <div>
+        <Grid container sx={{
+            background: "white",
+            borderRadius: ".7em"
+        }} ml={1}>
+            <Grid xs={12} mt={2} ml={1}>
+                <Typography ml={1.5} sx={{
+                    fontSize: "1.1em",
+                    fontWeight: "bold"
+                }}>
+                    Статистика
+                </Typography>
+            </Grid>
+            <Grid xs={12} ml={1}>
                 <Calendar data={day} flag={false}/>
-            </div>
-        </div>
+            </Grid>
+        </Grid>
     );
 }
 

@@ -1,16 +1,18 @@
 import {Grid} from "@mui/material";
-import TaskDay from "@/components/MainPage/taskDay";
 import Statistics from "@/components/MainPage/statistic";
+import TaskComponent from "@/components/MainPage/TaskComponent";
+import {TitlePage} from "@/components/MainPage/titlePage";
 
 export default function Home() {
     return (
-        <>
-            <div className="w-1/5">
-                <TaskDay/>
-            </div>
-            <div className="w-1/2">
+        <Grid container>
+            <Grid xs={8}>
+                <TitlePage title={"Пить воду"} flag={true}/>
+                <TaskComponent/>
+            </Grid>
+            <Grid xs={3.5}>
                 <Statistics/>
-            </div>
-        </>
+            </Grid>
+        </Grid>
     )
 }
