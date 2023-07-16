@@ -11,9 +11,9 @@ const Content: React.FC<Layouts> = ({children}) => {
         <>
             <Navbar>
                 <>
-                    <div className="w-1/6">
+                    <div className="">
                         <TitlePage title={"Пить воду"}/>
-                        {/*<Aside/>*/}
+                        <Aside/>
                     </div>
                     <div className="w-5/6">
                         {children}
