@@ -4,7 +4,7 @@ import TaskDay from "@/components/MainPage/TaskDay";
 
 const data = [
     {id: 1, date: "сегодня", tasks: ['Пить воду', "Пить водку"]},
-    {id: 2, date: "вчера", task: 'Пить воду'}
+    {id: 2, date: "вчера", task: 'Пить воду', img: true}
 ];
 
 const TaskComponent = () => {
