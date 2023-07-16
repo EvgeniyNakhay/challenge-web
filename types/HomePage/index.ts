@@ -6,6 +6,7 @@ interface HomePage {
         date: string,
         tasks?: string[]
         task?: string,
+        img?: boolean
     }
 }
 
