@@ -1,4 +1,4 @@
-import {Grid, List, ListItemText, Typography} from "@mui/material";
+import {Grid, List, ListItemText} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -8,7 +8,7 @@ const list = [
     {id: 1, text: 'Челленджи', url: '#'},
     {id: 2, text: 'Мир', url: '#'},
     {id: 3, text: 'Сообщества', url: '#'},
-    {id: 4, text: 'Создать', url: '#', style: {
+    {id: 4, text: 'Создать', url: '/сreate', style: {
             marginTop: -.7,
             color: "white",
             background: "#6B73EF",
@@ -16,7 +16,6 @@ const list = [
     },
 ]
 export const Navbar: React.FC = () => {
-
     return (
         <>
             <Grid container sx={{
