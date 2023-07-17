@@ -4,6 +4,8 @@ import TaskProgress from "@/components/MainPage/TaskProgress";
 import Image from "next/image";
 import archive from "@/public/icons/achiv.svg";
 import ModalUi from "@/components/Global/ModalUi";
+import {HomePage} from "@/types/HomePage";
+import TaskDayModal from "@/components/Global/Modals/TaskDayModal";
 
 
 const TaskDay: React.FC<HomePage> = ({data}) => {
@@ -39,7 +41,10 @@ const TaskDay: React.FC<HomePage> = ({data}) => {
                     }
                 </Grid>
             </Grid>
-            <ModalUi/>
+            {/*Модалка*/}
+            <ModalUi flag={false}>
+                <TaskDayModal/>
+            </ModalUi>
         </Grid>
     )
 }
