@@ -596,9 +596,10 @@ video {
 
 html,
 body {
-  margin-left: 5vw;
+  font-family: "Apple Color Emoji", serif;
+  font-size: 17px;
   background-color: #EAEAEAFF;
-  max-width: 90vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
