@@ -21,3 +21,7 @@ export interface CalendarTypes {
     }[],
     flag: boolean
 }
+
+export interface LayoutCreate {
+    children: React.ReactElement
+}

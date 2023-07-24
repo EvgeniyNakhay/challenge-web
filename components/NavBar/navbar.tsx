@@ -3,12 +3,13 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import Button from "@mui/material/Button";
+import {router} from "next/client";
 
 const list = [
     {id: 1, text: 'Челленджи', url: '#'},
     {id: 2, text: 'Мир', url: '#'},
     {id: 3, text: 'Сообщества', url: '#'},
-    {id: 4, text: 'Создать', url: '/сreate', style: {
+    {id: 4, text: 'Создать', url: '/create-challenge', style: {
             marginTop: -.7,
             color: "white",
             background: "#6B73EF",
@@ -16,8 +17,7 @@ const list = [
     },
 ]
 export const Navbar: React.FC = () => {
-    return (
-        <>
+    return (<>
             <Grid container sx={{
                 background: "#F7F8FC",
                 paddingLeft: '20vh',
@@ -65,4 +65,5 @@ export const Navbar: React.FC = () => {
             </Grid>
         </>
     )
+
 }
