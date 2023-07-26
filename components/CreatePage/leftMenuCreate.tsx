@@ -13,12 +13,11 @@ const steps = [
 const LeftMenuCreate = () => {
     const [currentStep, setCurrentStep] = useState(0);
 
-
     return (
         <Box sx={{
             background: "#F7F8FC",
-            height: "100vh",
-            boxShadow: "0px 5px 10px -1px rgba(100, 106, 111, 0.50)",
+            height: "43vmax",
+            boxShadow: "0px -5px 5px -5px rgba(100, 106, 111, 0.30)",
             padding: '5vh',
             paddingLeft: "7vh"
         }}>

@@ -4,17 +4,13 @@ import React from "react";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import {router} from "next/client";
+import ButtonBlueUI from "@/UI/ButtonBlueUI";
 
 const list = [
     {id: 1, text: 'Челленджи', url: '#'},
     {id: 2, text: 'Мир', url: '#'},
     {id: 3, text: 'Сообщества', url: '#'},
-    {id: 4, text: 'Создать', url: '/create-challenge', style: {
-            marginTop: -.7,
-            color: "white",
-            background: "#6B73EF",
-            "&:hover": {fontsize: 17, background: "#6B73EF", opacity: 0.8}}
-    },
+    {id: 4, text: 'Создать', url: '/create-challenge', style: true}
 ]
 export const Navbar: React.FC = () => {
     return (<>
@@ -37,12 +33,8 @@ export const Navbar: React.FC = () => {
                                 <>
                                     <ListItemText sx={{marginLeft: '4em'}}>
                                         {
-                                            item.style ?
-                                                <Button sx={item.style}>
-                                                    <Link href={item.url}>
-                                                        {item.text}
-                                                    </Link>
-                                                </Button>
+                                            item?.style ?
+                                               <ButtonBlueUI url={item.url} text={item.text}/>
                                                 :
                                                 <Link href={item.url}>{item.text}</Link>
                                         }

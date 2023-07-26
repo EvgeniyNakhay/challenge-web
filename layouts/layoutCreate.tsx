@@ -1,11 +1,13 @@
 import NavBarCreate from "@/components/CreatePage/navBarCreate";
 import LeftMenuCreate from "@/components/CreatePage/leftMenuCreate";
-import {Box, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import React from "react";
-import {LayoutCreate} from "@/types/Layouts";
+import {Layouts} from "@/types/Layouts";
+import Footer from "@/UI/footer";
+import ButtonBlueUI from "@/UI/ButtonBlueUI";
 
 
-const LayoutCreate: React.FC<LayoutCreate> = ({children}) => {
+const LayoutCreate: React.FC<Layouts> = ({children}) => {
     return (
         <>
             <NavBarCreate/>
@@ -17,6 +19,14 @@ const LayoutCreate: React.FC<LayoutCreate> = ({children}) => {
                     {children}
                 </Grid>
             </Grid>
+            <Footer>
+                <Grid container mt={3}>
+                    <Grid xs={11}></Grid>
+                    <Grid xs={1} pb={2}>
+                        <ButtonBlueUI text={"Далее"}/>
+                    </Grid>
+                </Grid>
+            </Footer>
         </>
     )
 }

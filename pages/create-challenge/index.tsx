@@ -7,7 +7,7 @@ export default function Index(){
         <LayoutCreate>
             <BoxInfo>
                 <Grid container>
-                    <Typography>dass</Typography>
+                   
                 </Grid>
             </BoxInfo>
         </LayoutCreate>
