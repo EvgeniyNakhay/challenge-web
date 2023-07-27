@@ -15,7 +15,7 @@ const LayoutCreate: React.FC<Layouts> = ({children}) => {
                 <Grid xs={2}>
                     <LeftMenuCreate/>
                 </Grid>
-                <Grid xs={9} m={3}>
+                <Grid xs={9}>
                     {children}
                 </Grid>
             </Grid>

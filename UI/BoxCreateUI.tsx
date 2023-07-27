@@ -3,9 +3,12 @@ import {Layouts} from "@/types/Layouts";
 
 
 const BoxCreateUI: React.FC<Layouts> = ({children}) => {
-  return <Box sx={{
-    padding: "1em",
-    background: 'white'
+  return <Box m={3} sx={{
+    paddingTop: "1.2em",
+    paddingBottom: "1.2em",
+    background: 'white',
+    borderRadius: "1em",
+    width: '100%'
   }}>
     {children}
   </Box>

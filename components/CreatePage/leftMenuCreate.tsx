@@ -17,7 +17,7 @@ const LeftMenuCreate = () => {
         <Box sx={{
             background: "#F7F8FC",
             height: "43vmax",
-            boxShadow: "0px -5px 5px -5px rgba(100, 106, 111, 0.30)",
+            boxShadow: "0px -5px 5px -5px rgba(100, 106, 111, 0.10)",
             padding: '5vh',
             paddingLeft: "7vh"
         }}>
