@@ -3,7 +3,7 @@ import LeftMenuCreate from "@/components/CreatePage/leftMenuCreate";
 import {Grid} from "@mui/material";
 import React from "react";
 import {Layouts} from "@/types/Layouts";
-import Footer from "@/UI/footer";
+import Footer from "@/UI/Footer";
 import ButtonBlueUI from "@/UI/ButtonBlueUI";
 
 
