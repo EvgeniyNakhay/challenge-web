@@ -3,7 +3,7 @@ import React from "react";
 import {InputUI} from "@/UI/typesUI/UI";
 
 
-const InputUI: React.FC<InputUI> = ({label, placeholder, type, multiline, icon}) => {
+const InputUI: React.FC<InputUI> = ({label, placeholder, type, multiline=false, icon = undefined}) => {
     const inputSize = type === ("date" || "datetime-local") ? 5 : 7
     const sizeElem = icon ? 11 : 12;
 

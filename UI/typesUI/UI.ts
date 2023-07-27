@@ -9,8 +9,8 @@ export interface InputUI{
     label: string,
     placeholder: string,
     type: "search" | "submit" | "email" | "date" | "datetime-local" | "radio" | "text" | "password" | "time",
-    multiline: boolean,
-    icon: React.ReactNode | null
+    multiline?: boolean,
+    icon?: React.ReactNode
 }
 
 export interface CustomButton {

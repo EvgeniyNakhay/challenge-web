@@ -23,7 +23,7 @@ const LayoutCreate: React.FC<Layouts> = ({children}) => {
                 <Grid container mt={3}>
                     <Grid xs={11}></Grid>
                     <Grid xs={1} pb={2}>
-                        <ButtonBlueUI text={"Далее"}/>
+                        <ButtonBlueUI text={"Далее"} url={""}/>
                     </Grid>
                 </Grid>
             </Footer>
