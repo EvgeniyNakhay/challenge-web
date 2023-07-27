@@ -1,8 +1,9 @@
 import {Grid, List, ListItemText} from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Button from "@mui/material/Button";
+import ModalSignIn from "../Global/ModalSignIn";
 import {router} from "next/client";
 import ButtonBlueUI from "@/UI/ButtonBlueUI";
 
@@ -54,8 +55,7 @@ export const Navbar: React.FC = () => {
                         />
                     </div>
                 </Grid>
-            </Grid>
+            {openModalSignIn && <ModalSignIn/>}
         </>
     )
-
 }
