@@ -1,10 +1,7 @@
 import {Grid, List, ListItemText} from "@mui/material";
 import Image from "next/image";
-import React, {useState} from "react";
+import React from "react";
 import Link from "next/link";
-import Button from "@mui/material/Button";
-import ModalSignIn from "../Global/ModalSignIn";
-import {router} from "next/client";
 import ButtonBlueUI from "@/UI/ButtonBlueUI";
 
 const list = [
@@ -14,7 +11,9 @@ const list = [
     {id: 4, text: 'Создать', url: '/create-challenge', style: true}
 ]
 export const Navbar: React.FC = () => {
-    return (<>
+
+    return (
+        <>
             <Grid container sx={{
                 background: "#F7F8FC",
                 paddingLeft: '20vh',
@@ -55,7 +54,7 @@ export const Navbar: React.FC = () => {
                         />
                     </div>
                 </Grid>
-            {openModalSignIn && <ModalSignIn/>}
+            </Grid>    
         </>
-    )
+    )    
 }

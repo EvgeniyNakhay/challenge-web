@@ -1,4 +1,4 @@
-import {Box, TextField, Grid, Icon, Modal, Typography} from "@mui/material";
+import {Box, TextField, Grid, Modal, Typography} from "@mui/material";
 import React, {useState} from "react";
 import Image from "next/image";
 import archive from "@/public/icons/achiv.svg";
