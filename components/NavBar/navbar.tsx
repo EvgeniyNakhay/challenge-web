@@ -9,7 +9,7 @@ const list = [
     {id: 1, text: 'Челленджи', url: '#'},
     {id: 2, text: 'Мир', url: '#'},
     {id: 3, text: 'Сообщества', url: '#'},
-    {id: 4, text: 'Создать', url: '#', style: {
+    {id: 4, text: 'Создать', url: '/signUpPage', style: {
             marginTop: -.7,
             color: "white",
             background: "#6B73EF",
