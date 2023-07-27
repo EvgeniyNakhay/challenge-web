@@ -5,7 +5,7 @@ import {ButtonBlue} from "@/UI/typesUI/UI";
 import {Typography} from "@mui/material";
 
 
-const ButtonBlueUI: React.FC<ButtonBlue> = ({text, url}) => {
+const ButtonBlueUI: React.FC<ButtonBlue> = ({text, url=""}) => {
     return <Button sx={{
         color: "white",
         background: "#6B73EF",
@@ -19,7 +19,7 @@ const ButtonBlueUI: React.FC<ButtonBlue> = ({text, url}) => {
         }
     }}>
         {
-            url ?
+            url !== "" ?
                 (<Link href={url}>
                     {text}
                 </Link>) :  <Typography sx={{color: "white"}}>
