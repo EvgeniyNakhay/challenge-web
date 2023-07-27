@@ -1,6 +1,7 @@
+import React from "react";
 
 
-interface HomePage {
+export interface HomePage {
     data: {
         id: number
         date: string,
@@ -12,4 +13,9 @@ interface HomePage {
 
 interface TaskProgress {
     text: string | undefined
+}
+
+export interface ModalUi {
+    flag: boolean,
+    children:  React.ReactElement
 }
