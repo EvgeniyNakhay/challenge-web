@@ -1,8 +1,8 @@
 import { Grid, TextField, Typography } from "@mui/material";
 import React from "react";
-import { InputUI } from "@/UI/typesUI/UI";
+import { AuthorizationInputUI } from "@/UI/typesUI/UI";
 
-const InputUI: React.FC<InputUI> = ({
+const AuthorizationInputUI: React.FC<AuthorizationInputUI> = ({
   label,
   placeholder,
   type,
@@ -13,7 +13,7 @@ const InputUI: React.FC<InputUI> = ({
   const sizeElem = icon ? 11 : 12;
 
   return (
-    <Grid container xs={inputSize} ml={4} mb={2}>
+    <Grid container mb={2}>
       <Grid xs={12} mb={1} ml={0.4}>
         <Typography
           sx={{
@@ -39,4 +39,4 @@ const InputUI: React.FC<InputUI> = ({
   );
 };
 
-export default InputUI;
+export default AuthorizationInputUI;

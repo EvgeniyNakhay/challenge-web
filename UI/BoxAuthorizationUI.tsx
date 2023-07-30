@@ -1,13 +1,12 @@
 import { Box } from "@mui/material";
 import { Layouts } from "@/types/Layouts";
 
-const BoxCreateUI: React.FC<Layouts> = ({ children }) => {
+const BoxAuthorizationUI: React.FC<Layouts> = ({ children }) => {
   return (
     <Box
-      m={3}
       sx={{
-        paddingTop: "1.2em",
-        paddingBottom: "1.2em",
+        maxWidth: "632px",
+        padding: "32px",
         background: "white",
         borderRadius: "1em",
       }}
@@ -17,4 +16,4 @@ const BoxCreateUI: React.FC<Layouts> = ({ children }) => {
   );
 };
 
-export default BoxCreateUI;
+export default BoxAuthorizationUI;

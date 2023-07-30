@@ -1,16 +1,19 @@
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import React from "react";
-import { ButtonBlue } from "@/UI/typesUI/UI";
+import { AuthorizationButtonBlue } from "@/UI/typesUI/UI";
 import { Typography } from "@mui/material";
 
-const ButtonBlueUI: React.FC<ButtonBlue> = ({ text, url = "" }) => {
+const AuthorizationButtonBlueUI: React.FC<AuthorizationButtonBlue> = ({
+  text,
+  url = "",
+}) => {
   return (
     <Button
       sx={{
+        width: "100%",
         color: "white",
         background: "#6B73EF",
-        marginTop: "-5%",
         padding: "10px 16px",
         "&:hover": {
           fontsize: 17,
@@ -28,4 +31,4 @@ const ButtonBlueUI: React.FC<ButtonBlue> = ({ text, url = "" }) => {
   );
 };
 
-export default ButtonBlueUI;
+export default AuthorizationButtonBlueUI;

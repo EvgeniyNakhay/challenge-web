@@ -1,109 +1,88 @@
-import {Grid, Container, Paper, TextField, Button, Typography} from "@mui/material";
+import { Grid, Container, Typography, Link } from "@mui/material";
 import React from "react";
-import {Layouts} from "@/types/Layouts";
-import Aside from "@/components/MainPage/aside";
-import {Navbar} from "@/components/NavBar/navbar";
+import { Layouts } from "@/types/Layouts";
+import { Navbar } from "@/components/NavBar/navbar";
+import BoxAuthorizationUI from "@/UI/BoxAuthorizationUI";
+import AuthorizationInputUI from "@/UI/AuthorizationInputUI";
+import AuthorizationButtonBlueUI from "@/UI/AuthorizationButtonBlueUI";
 
-
-const Content: React.FC<Layouts> = ({children}) => {
-    return (
-        <>
-            <Navbar/>
-            {/* <Grid container ml={10}>
-                <Grid mr={2} xs={1}>
-                    <Aside/>
+const Content: React.FC<Layouts> = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <Container>
+        <Grid container justifyContent="center">
+          <BoxAuthorizationUI>
+            <>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontWeight: 600,
+                  fontSize: "32px",
+                }}
+              >
+                Регистрация
+              </Typography>
+              <Grid container mt={1} mb={2}>
+                <Grid container direction="row" spacing={2}>
+                  <Grid item xs={6}>
+                    <AuthorizationInputUI
+                      type={"text"}
+                      placeholder={"Введите имя"}
+                      label={"Имя"}
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <AuthorizationInputUI
+                      type={"text"}
+                      placeholder={"Введите фамилию"}
+                      label={"Фамилия"}
+                    />
+                  </Grid>
                 </Grid>
-                <Grid xs={10}>
-                    {children}
-                </Grid>
-            </Grid> */}
-
-            <Container maxWidth="sm">
-                <Grid 
-                    container 
-                    spacing={2}
-                    direction="column"
-                    justifyContent="center"
-                    style={{ minHeight: '100vh' }}
+                <AuthorizationInputUI
+                  type={"email"}
+                  placeholder={"Введите почту"}
+                  label={"E-mail"}
+                />
+                <AuthorizationInputUI
+                  type={"password"}
+                  placeholder={"Придумайте пароль"}
+                  label={"Пароль"}
+                />
+                <AuthorizationInputUI
+                  type={"password"}
+                  placeholder={"Подтвердите пароль"}
+                  label={"Подтверждение пароля"}
+                />
+              </Grid>
+              <Grid spacing={2} maxWidth="318px" width="100%" margin="auto">
+                <AuthorizationButtonBlueUI
+                  text={"Зарегистрироваться"}
+                  url={""}
+                />
+                <Typography
+                  mt={1}
+                  paddingX={1}
+                  sx={{
+                    maxWidth: "318px",
+                    fontSize: "12px",
+                    textAlign: "center",
+                  }}
                 >
-                    <Paper 
-                        variant="outlined" 
-                        sx={{ padding: '32px'}}
-                    >
-                        <Grid container direction="column" alignItems="center" rowSpacing="32px">
-                            <Typography variant="h3" display="block">
-                                Регистрация
-                            </Typography>
-                            <Grid container direction="column" rowSpacing="24px">
-                                <Grid container spacing={2} justifyContent="space-between">
-                                    <Grid item>
-                                        <TextField 
-                                            fullWidth
-                                            id="outlined-basic"
-                                            label="Имя"
-                                            placeholder="Введите имя"
-                                            variant="outlined"
-                                        />        
-                                    </Grid>
-                                    <Grid item>
-                                        <TextField
-                                            fullWidth 
-                                            id="outlined-basic"
-                                            label="Фамилия"
-                                            placeholder="Введите фамилию"
-                                            variant="outlined"
-                                        />        
-                                    </Grid>
-                                </Grid>
-                                <Grid item>
-                                    <TextField 
-                                        type="emal"
-                                        fullWidth
-                                        id="outlined-basic"
-                                        label="E-mail"
-                                        placeholder="Введите почту"
-                                        variant="outlined"
-                                    />        
-                                </Grid>
-                                <Grid item>
-                                    <TextField 
-                                        type="password"
-                                        fullWidth
-                                        id="outlined-basic"
-                                        label="Пароль"
-                                        placeholder="Придумайте пароль"
-                                        variant="outlined"
-                                    />        
-                                </Grid>
-                                <Grid item>
-                                    <TextField 
-                                        type="password"
-                                        fullWidth
-                                        id="outlined-basic"
-                                        label="Подтверждение пароля"
-                                        placeholder="Подтвердите пароль"
-                                        variant="outlined"
-                                    />        
-                                </Grid>
-                            </Grid>
-                            <Grid item style={{ maxWidth: '318px' }}>
-                                <Button fullWidth type="submit" variant="contained">Зарегистрироваться</Button>
-                            </Grid>
-                            <Typography 
-                                align="center" 
-                                variant="caption"
-                                display="block"
-                                style={{ fontSize: '12px', maxWidth: '318px', marginTop: '16px'}}
-                            >
-                                Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с Правилами сайта и даете согласие на обработку персональных данных
-                            </Typography>
-                        </Grid>
-                    </Paper>
-                </Grid>
-            </Container>
-
-        </>
-    )
-}
+                  Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с
+                  <Link px={0.5} href="#" underline="hover">
+                    Правилами сайта
+                  </Link>
+                  и даете согласие на обработку персональных данных
+                </Typography>
+              </Grid>
+            </>
+          </BoxAuthorizationUI>
+        </Grid>
+      </Container>
+    </>
+  );
+};
 
 export default Content;
