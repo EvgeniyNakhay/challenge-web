@@ -2,8 +2,9 @@ import LayoutCreate from "@/layouts/layoutCreate";
 import {Button, Grid, Typography} from "@mui/material";
 import BoxCreateUI from "@/UI/BoxCreateUI";
 import InputUI from "@/UI/InputUI";
-import {PlusIcon} from "@/UI/CastomIcon";
+import {BurgerIcon, CopyIcon, PlusIcon} from "@/UI/Icons/CastomIcon";
 import CustomButtnoIcon from "@/UI/CustomButtnoIcon";
+import React from "react";
 
 
 export default function Index(){
@@ -34,8 +35,21 @@ export default function Index(){
                 <InputUI
                     type={"text"}
                     label={"День 1"}
-                    placeholder={"Введите описание"}/>
-                <CustomButtnoIcon/>
+                    placeholder={"Введите описание"}
+                    icon={ <CopyIcon/>}
+                />
+                <Grid container mt={3}>
+                    <Grid xs={2}>
+                        <CustomButtnoIcon
+                            icon={<PlusIcon/>}
+                            text={"Добавить день"}/>
+                    </Grid>
+                    <Grid xs={4}>
+                        <CustomButtnoIcon
+                            icon={<BurgerIcon/>}
+                            text={"Разделить на периоды"}/>
+                    </Grid>
+                </Grid>
             </BoxCreateUI>
         </LayoutCreate>
     )
